@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import Navbar from "./components/navbar/Navbar";
+import './app.css';
+import { darkTheme,lightTheme } from "./assets/Theme";
+import { ThemeProvider } from "styled-components";
+import Intro from "./components/intro/Intro";
+import Menu from "./components/Menu/Menu";
+import Projects from "./components/Projects/Projects";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = ()=>{
+
+    const [mobile, setMobile] = useState(false);
+    const [darkMode, setDarkMode] = useState(false);
+    const [activeNav, setActiveNav] = useState(false);
+
+    useEffect(()=>{
+        if (window.matchMedia("(max-width: 425px)").matches) {
+            // The viewport is less than 425px pixels wide
+            setMobile((prevState) => !prevState);
+          }
+    },[])
+    return (
+        <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+            <div className="app" id="app2">
+                <Navbar activeNav={activeNav} setActiveNav={setActiveNav} mobile={mobile} setMobile={setMobile} darkMode={darkMode} setDarkMode={setDarkMode} />
+                <Menu darkMode={darkMode} setDarkMode={setDarkMode} activeNav={activeNav}/>
+                <Intro mobile={mobile}/>
+                <Projects/>
+            </div>
+
+        </ThemeProvider>
+    )
 }
 
 export default App;
