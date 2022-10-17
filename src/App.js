@@ -6,6 +6,8 @@ import { ThemeProvider } from "styled-components";
 import Intro from "./components/intro/Intro";
 import Menu from "./components/Menu/Menu";
 import Projects from "./components/Projects/Projects";
+import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
 
 const App = ()=>{
 
@@ -14,7 +16,7 @@ const App = ()=>{
     const [activeNav, setActiveNav] = useState(false);
 
     useEffect(()=>{
-        if (window.matchMedia("(max-width: 425px)").matches) {
+        if (window.matchMedia("(max-width: 600px)").matches) {
             // The viewport is less than 425px pixels wide
             setMobile((prevState) => !prevState);
           }
@@ -26,6 +28,8 @@ const App = ()=>{
                 <Menu darkMode={darkMode} setDarkMode={setDarkMode} activeNav={activeNav}/>
                 <Intro mobile={mobile}/>
                 <Projects/>
+                <About darkMode={darkMode}/>
+                <Contact/>
             </div>
 
         </ThemeProvider>

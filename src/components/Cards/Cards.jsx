@@ -23,12 +23,18 @@ const Cards = () => {
 export default Cards;
 
 const ProjectCards = styled.div`
+  width: 354px;
+  height: 200px;
   margin-bottom: 30px;
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.43);
   -webkit-box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.43);
   -moz-box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.43);
   position: relative;
   border-radius: 10px;
+  @media (max-width: 425px) {
+    width: 290px;
+    height: 150px;
+  }
 
   background-image: ${(props) => (CodeImage ? `url(${props.CodeImage})` : "")};
   /* background-color: ${(props) => props.theme.bg}; */
@@ -39,8 +45,8 @@ const ProjectCards = styled.div`
   }
 `;
 const CardImageContainer = styled.div`
-  width: 354px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
 `;
 const CardImage = styled.img`
   width: 100%;

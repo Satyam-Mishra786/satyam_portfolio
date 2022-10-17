@@ -40,7 +40,10 @@ const Navbar = ({ darkMode, setDarkMode, mobile, activeNav, setActiveNav }) => {
         )}
 
         {mobile ? (
-          <Hamburger onClick={toggleMenu}>
+          <Hamburger
+            className={activeNav ? "hamburger active" : "hamburger"}
+            onClick={toggleMenu}
+          >
             <Line1></Line1>
             <Line2></Line2>
             <Line3></Line3>

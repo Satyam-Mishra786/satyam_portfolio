@@ -35,6 +35,10 @@ export const NavContact = styled.div`
   text-align: left;
   display: flex;
   gap: 30px;
+
+  @media (max-width: 1046px) {
+    display: none;
+  }
 `;
 export const Email = styled.div`
   font-weight: 300;
@@ -44,62 +48,6 @@ export const Phone = styled.div`
 `;
 export const SpanBold = styled.span`
   font-weight: 500;
-`;
-
-export const NavigationListContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-`;
-
-export const List = styled.ul`
-  list-style: none;
-  display: flex;
-  gap: 20px;
-`;
-
-export const ListItem1 = styled.li`
-  &:hover {
-    color: ${(props) => props.theme.textSoft};
-  }
-  cursor: pointer;
-`;
-export const ListItem2 = styled.li`
-  &:hover {
-    color: ${(props) => props.theme.textSoft};
-    cursor: pointer;
-  }
-`;
-export const ListItem3 = styled.li`
-  &:hover {
-    color: ${(props) => props.theme.textSoft};
-    cursor: pointer;
-  }
-`;
-
-export const ModeTogglerContainer = styled.div`
-  z-index: 1;
-  width: 40px;
-  height: 22px;
-  border-radius: 42%;
-  background-color: ${(props) => (props.darkMode ? "white" : "black")};
-  color: ${(props) => (props.darkMode ? "black" : "white")};
-  padding: 3px;
-  display: flex;
-  transition: all 0.5s ease-out;
-  cursor: pointer;
-`;
-export const ModeToggler = styled.div`
-  color: ${(props) => (props.darkMode ? "white" : "black")};
-  background-color: ${(props) => (props.darkMode ? "black" : "white")};
-  width: 50%;
-  height: 100%;
-  border-radius: 50%;
-
-  transform-origin: left;
-  transform: ${(props) => (props.darkMode ? "translateX(17px)" : "")};
 `;
 
 export const Hamburger = styled.div`
@@ -120,6 +68,7 @@ export const Hamburger = styled.div`
     border-radius: 3px;
     height: 5px;
   } 
+
 `;
 export const Line1 = styled.div``;
 export const Line2 = styled.div``;

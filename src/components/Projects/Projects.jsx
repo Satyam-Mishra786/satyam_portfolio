@@ -11,7 +11,7 @@ import {
 } from "./Projects.styled";
 const Projects = () => {
   return (
-    <ProjectContainer>
+    <ProjectContainer id="myapps">
       <ProjectType>
         {/* <ReactProjects>React Apps</ReactProjects>
         <SimpleProjects>Vanilla JS App</SimpleProjects> */}

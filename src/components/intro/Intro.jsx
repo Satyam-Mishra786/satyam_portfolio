@@ -4,6 +4,7 @@ import BgImage from "../../assets/img/Code.jpg";
 import {
   IntroContianer,
   Left,
+  Wrapper,
   Right,
   Small,
   Medium,
@@ -21,13 +22,15 @@ const Intro = ({ mobile }) => {
     });
   }, []);
   return (
-    <IntroContianer>
+    <IntroContianer id="home">
       <Left>
-        <Small mobile={mobile}>I'm</Small>
-        <Large mobile={mobile}>Satyam Mishra</Large>
-        <Medium mobile={mobile} id="myElement"></Medium>
+        <Wrapper>
+          <Small>I'm</Small>
+          <Large>Satyam Mishra</Large>
+          <Medium id="myElement"></Medium>
+        </Wrapper>
       </Left>
-      {!mobile && <Right Image={BgImage} />}
+      <Right Image={BgImage} />
     </IntroContianer>
   );
 };

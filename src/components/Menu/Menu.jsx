@@ -19,7 +19,6 @@ const MenuContainer = styled.div`
   z-index: 2;
   border-top: 2px solid black;
   background-color: ${(props) => props.theme.bg};
-  height: 70px;
   width: 100%;
   padding: 10px 20px;
   box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.75);

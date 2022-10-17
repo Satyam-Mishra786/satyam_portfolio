@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ProjectContainer = styled.div`
+    width: 100%;
     border-top: 2px solid ${props => props.theme.text};
   background-color: ${props=>props.theme.bg};
   color: ${props=>props.theme.text};
@@ -15,7 +16,8 @@ export const ProjectType = styled.div`
   gap: 50px;
   border-bottom: 2px solid ${props => props.theme.text};
   color: ${props => props.theme.textSoft};
-  font-size: 20px;
+  font-size: 35px;
+  
 
 
   &>*{
@@ -31,8 +33,8 @@ export const SimpleProjects = styled.div``
 export const CardsContianer = styled.div`
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: space-evenly;
-  padding: 50px 50px 0 50px;
-
+  padding: 50px;
+  border-bottom: 2px solid ${props => props.theme.text};
 `;
