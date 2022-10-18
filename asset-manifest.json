@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/satyam_portfolio/static/css/main.ee79063f.css",
+    "main.js": "/satyam_portfolio/static/js/main.7385900c.js",
+    "static/media/Code.jpg": "/satyam_portfolio/static/media/Code.0e39fe6e8e58effa83c7.jpg",
+    "static/media/kbc.png": "/satyam_portfolio/static/media/kbc.b6bd570d8fc16fc52609.png",
+    "static/media/youtubeClone.png": "/satyam_portfolio/static/media/youtubeClone.c4e94438cf9f5d7bd687.png",
+    "static/media/shoeStore.png": "/satyam_portfolio/static/media/shoeStore.a75907aaf6d481d204e4.png",
+    "static/media/textUtils.png": "/satyam_portfolio/static/media/textUtils.da4b0a77b359cab1ff23.png",
+    "static/media/logo.jpg": "/satyam_portfolio/static/media/logo.94c87677d953bdc4ebbf.jpg",
+    "index.html": "/satyam_portfolio/index.html",
+    "main.ee79063f.css.map": "/satyam_portfolio/static/css/main.ee79063f.css.map",
+    "main.7385900c.js.map": "/satyam_portfolio/static/js/main.7385900c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ee79063f.css",
+    "static/js/main.7385900c.js"
+  ]
+}
