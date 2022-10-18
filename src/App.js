@@ -8,6 +8,7 @@ import Menu from "./components/Menu/Menu";
 import Projects from "./components/Projects/Projects";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 const App = ()=>{
 
@@ -30,6 +31,7 @@ const App = ()=>{
                 <Projects/>
                 <About darkMode={darkMode}/>
                 <Contact/>
+                <Footer/>
             </div>
 
         </ThemeProvider>

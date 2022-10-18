@@ -39,15 +39,13 @@ export const Right = styled.div`
 `;
 
 export const Small = styled.div`
-  /* position: absolute;
-  top:43%; */
   font-size: 35px;
+  height: 50px;
   font-weight: 400;
   color: ${(props) => props.theme.textSoft};
 
   @media (max-width: 600px) {
     font-size: 25px;
-    /* top: 46%; */
   }
   @media (max-width:425px) {
     font-size: 30px;
@@ -57,12 +55,10 @@ export const Small = styled.div`
 export const Medium = styled.div`
   color: red;
   font-size: 42px;
-  /* position: absolute; */
   margin-left: 70px;
-  /* top:60%; */
+  height: 70px;
   @media (max-width: 600px) {
     margin-left: 50px;
-    /* top: 70%; */
   }
   @media (max-width:425px) {
     font-size: 36px;
@@ -74,13 +70,10 @@ export const Large = styled.div`
   color: ${(props) => props.theme.text};
   font-size: 50px;
   font-weight: 500;
-  /* height: 70px; */
-  /* position: absolute; */
+  height: 70px;
   margin-left: 30px;
-  /* top:50%; */
   @media (max-width: 600px) {
     margin-left: 20px;
-    /* top: 55%; */
   }
   @media (max-width: 425px) {
     font-size: 44px;

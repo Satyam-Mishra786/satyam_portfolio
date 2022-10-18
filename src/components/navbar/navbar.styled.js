@@ -10,7 +10,9 @@ export const Nav = styled.nav`
   color: ${(props) => props.theme.text};
   display: flex;
   align-items: center;
-  box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 12px -2px rgba(0, 0, 0, 0.81);
+  -webkit-box-shadow: 0px 3px 12px -2px rgba(0, 0, 0, 0.81);
+  -moz-box-shadow: 0px 3px 12px -2px rgba(0, 0, 0, 0.81);
 `; 
 
 export const NavWrapper = styled.div`
@@ -19,36 +21,18 @@ export const NavWrapper = styled.div`
   align-items: center;
   width: 100%;
   padding: 5px 20px;
-`;
+  `;
 
 export const LogoContainer = styled.div`
-  object-fit: cover;
 `;
 
 export const Logo = styled.img`
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  object-fit:cover;
 `;
 
-export const NavContact = styled.div`
-  text-align: left;
-  display: flex;
-  gap: 30px;
-
-  @media (max-width: 1046px) {
-    display: none;
-  }
-`;
-export const Email = styled.div`
-  font-weight: 300;
-`;
-export const Phone = styled.div`
-  font-weight: 300;
-`;
-export const SpanBold = styled.span`
-  font-weight: 500;
-`;
 
 export const Hamburger = styled.div`
   width: 50px;

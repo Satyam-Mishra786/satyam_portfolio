@@ -1,3 +1,4 @@
+import { Email, Instagram, Phone } from "@mui/icons-material";
 import React from "react";
 import { useState } from "react";
 import styled from "styled-components";
@@ -24,80 +25,147 @@ const Contact = () => {
   };
   return (
     <ContactContainer id="contact">
-      <ContactHead>LET'S CONNECT</ContactHead>
-      <Form onSubmit={handleSubmit}>
-        <InputArea>
-          <InputContainer>
-            <InputName htmlFor="firstNameInput">First Name</InputName>
-            <InputFields
-              name="firstName"
-              value={info.firstName}
-              onChange={handleChange}
-              required
-              id="firstNameInput"
-            />
-          </InputContainer>
-          <InputContainer>
-            <InputName htmlFor="lastNameInput">Last Name</InputName>
-            <InputFields
-              name="lastName"
-              value={info.lastName}
-              onChange={handleChange}
-              id="lastNameInput"
-            />
-          </InputContainer>
-          <InputContainer>
-            <InputName htmlFor="phoneInput">Phone</InputName>
-            <InputFields
-              name="phone"
-              id="phoneInput"
-              value={info.phone}
-              onChange={handleChange}
-              type="tel"
-            />
-          </InputContainer>
-          <InputContainer>
-            <InputName htmlFor="emailInput">Email</InputName>
-            <InputFields
-              name="email"
-              value={info.email}
-              onChange={handleChange}
-              required
-              type="email"
-              id="emailInput"
-            />
-          </InputContainer>
-        </InputArea>
-        <ButtonContainer>
-          <SubmitButton type="submit" disabled={message.length >= 1}>
-            Submit
-          </SubmitButton>
-        </ButtonContainer>
-        <Message>{message}</Message>
-      </Form>
+      <LeftContainer>
+        <ContactHead>LET'S CONNECT</ContactHead>
+        <Form onSubmit={handleSubmit}>
+          <InputArea>
+            <InputContainer>
+              <InputName htmlFor="firstNameInput">First Name</InputName>
+              <InputFields
+                name="firstName"
+                value={info.firstName}
+                onChange={handleChange}
+                required
+                id="firstNameInput"
+              />
+            </InputContainer>
+            <InputContainer>
+              <InputName htmlFor="lastNameInput">Last Name</InputName>
+              <InputFields
+                name="lastName"
+                value={info.lastName}
+                onChange={handleChange}
+                id="lastNameInput"
+              />
+            </InputContainer>
+            <InputContainer>
+              <InputName htmlFor="phoneInput">Phone</InputName>
+              <InputFields
+                name="phone"
+                id="phoneInput"
+                value={info.phone}
+                onChange={handleChange}
+                type="tel"
+              />
+            </InputContainer>
+            <InputContainer>
+              <InputName htmlFor="emailInput">Email</InputName>
+              <InputFields
+                name="email"
+                value={info.email}
+                onChange={handleChange}
+                required
+                type="email"
+                id="emailInput"
+              />
+            </InputContainer>
+          </InputArea>
+          <ButtonContainer>
+            <SubmitButton type="submit" disabled={message.length >= 1}>
+              Submit
+            </SubmitButton>
+          </ButtonContainer>
+          <Message>{message}</Message>
+        </Form>
+      </LeftContainer>
+      <RightContainer>
+        <MyContact>
+          <ContactHead>Contact Information</ContactHead>
+          <ContactWrapper>
+            <ContactDiv>
+              <Phone />
+              +91 8252323109
+            </ContactDiv>
+            <ContactDiv>
+              <Email />
+              satyam482002@gmail.com
+            </ContactDiv>
+            <ContactDiv>
+              <Instagram />
+              satyammishra5509
+            </ContactDiv>
+          </ContactWrapper>
+        </MyContact>
+      </RightContainer>
     </ContactContainer>
   );
 };
 
 export default Contact;
 
+// STYLED COMPONENTS
 export const ContactContainer = styled.div`
   width: 100%;
-  display: flex;
-  padding-top: 50px;
+  padding: 50px;
+
   background-color: ${(props) => props.theme.bg};
   color: ${(props) => props.theme.text};
+  display: flex;
+
+  @media (max-width: 1046px) {
+    flex-direction: column;
+  }
+  @media (max-width: 800px) {
+    padding: 20px;
+  }
+`;
+
+export const LeftContainer = styled.div`
+  flex: 3;
+`;
+export const RightContainer = styled.div`
+  flex: 1;
+  padding: 50px;
+  height: 100%;
+  @media (max-width: 450px) {
+    padding: 10px;
+  }
+`;
+
+export const MyContact = styled.div`
+  border-radius: 10px;
+  box-shadow: 1px -1px 8px 5px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 1px -1px 8px 5px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 1px -1px 8px 5px rgba(0, 0, 0, 0.27);
+  padding: 20px;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 40px;
+  @media (max-width: 450px) {
+    padding: 10px;
+    width: 100%;
+  }
 `;
 
 export const ContactHead = styled.div`
   width: 100%;
-  height: 50px;
+  height: 30px;
+  font-size: 25px;
   text-align: center;
-  font-size: 30px;
-  padding: 10px 0;
+`;
+export const ContactWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+`;
+
+export const ContactDiv = styled.div`
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 `;
 
 export const Form = styled.form`
@@ -109,6 +177,10 @@ export const Form = styled.form`
   gap: 30px;
   justify-content: center;
   color: ${(props) => props.theme.text};
+
+  @media (max-width: 800px) {
+    padding: 20px;
+  }
 `;
 export const InputArea = styled.div`
   display: flex;
@@ -117,6 +189,9 @@ export const InputArea = styled.div`
   width: 100%;
   height: 100%;
   flex-wrap: wrap;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 
 export const InputContainer = styled.div`
@@ -127,6 +202,10 @@ export const InputContainer = styled.div`
   width: 50%;
   gap: 10px;
   margin-bottom: 30px;
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 export const InputName = styled.label`
@@ -140,6 +219,9 @@ export const InputFields = styled.input`
   font-size: 19px;
   background: transparent;
   color: ${(props) => props.theme.text};
+  @media (max-width: 650px) {
+    width: 100%;
+  }
 `;
 
 export const ButtonContainer = styled.div``;

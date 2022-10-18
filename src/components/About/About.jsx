@@ -102,9 +102,9 @@ export const LeftContainer = styled.div`
   border-left: 3px solid ${(props) => props.theme.textSoft};
   font-size: 22px;
   border-radius: 20px;
-  box-shadow: 4px 3px 22px 3px rgba(0, 0, 0, 0.45);
-  -webkit-box-shadow: 4px 3px 22px 3px rgba(0, 0, 0, 0.45);
-  -moz-box-shadow: 4px 3px 22px 3px rgba(0, 0, 0, 0.45);
+  box-shadow: 1px -1px 8px 5px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 1px -1px 8px 5px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 1px -1px 8px 5px rgba(0, 0, 0, 0.27);
 `;
 export const RightContainer = styled.div`
   padding-top: 20px;
@@ -116,9 +116,13 @@ export const RightContainer = styled.div`
 `;
 
 export const ContainerHeads = styled.div`
-  font-size: 28px;
+  font-size: 26px;
   text-align: center;
   text-decoration: underline;
+
+  @media (max-width: 800px) {
+    font-size: 21px;
+  }
 `;
 export const ContentContainerLeft = styled.div`
   padding: 20px 50px;

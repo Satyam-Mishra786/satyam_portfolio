@@ -28,17 +28,6 @@ const Navbar = ({ darkMode, setDarkMode, mobile, activeNav, setActiveNav }) => {
           <Logo src={logoImage} />
         </LogoContainer>
 
-        {!mobile && (
-          <NavContact>
-            <Email>
-              Email <SpanBold> : satyam482002@gmail.com</SpanBold>
-            </Email>
-            <Phone>
-              Phone <SpanBold> : +91 8252323109</SpanBold>
-            </Phone>
-          </NavContact>
-        )}
-
         {mobile ? (
           <Hamburger
             className={activeNav ? "hamburger active" : "hamburger"}
