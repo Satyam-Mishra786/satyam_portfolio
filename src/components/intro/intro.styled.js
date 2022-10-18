@@ -48,7 +48,7 @@ export const Small = styled.div`
     font-size: 25px;
   }
   @media (max-width:425px) {
-    font-size: 30px;
+    font-size: 27px;
   }
 `;
 
@@ -61,7 +61,7 @@ export const Medium = styled.div`
     margin-left: 50px;
   }
   @media (max-width:425px) {
-    font-size: 36px;
+    font-size: 34px;
   }
   
 `;
@@ -76,6 +76,6 @@ export const Large = styled.div`
     margin-left: 20px;
   }
   @media (max-width: 425px) {
-    font-size: 44px;
+    font-size: 40px;
   }
 `;

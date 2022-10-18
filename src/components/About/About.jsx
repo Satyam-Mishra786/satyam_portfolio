@@ -26,9 +26,8 @@ const About = ({ darkMode }) => {
             Hello I'm
             <Highlight> Front-end Web Developer </Highlight>
             from <Highlight> India. </Highlight> I am dedicated to deliver the
-            best <Highlight> UI Designs </Highlight> for best user experience.
-            I'm a student currently studying Bachelor in Computer Application at
-            Patna Science College, Patna.
+            best <Highlight> UI Designs </Highlight> for best user experience. I
+            can create fully responsive websites.
           </ContentContainerLeft>
         </LeftContainer>
         <RightContainer>
