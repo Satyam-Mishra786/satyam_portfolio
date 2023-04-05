@@ -10,10 +10,10 @@ export const Nav = styled.nav`
   color: ${(props) => props.theme.text};
   display: flex;
   align-items: center;
-  box-shadow: 0px 3px 12px -2px rgba(0, 0, 0, 0.81);
-  -webkit-box-shadow: 0px 3px 12px -2px rgba(0, 0, 0, 0.81);
-  -moz-box-shadow: 0px 3px 12px -2px rgba(0, 0, 0, 0.81);
-`; 
+  -webkit-box-shadow: 0px 1px 9px 1px rgba(0,0,0,0.59);
+-moz-box-shadow: 0px 1px 9px 1px rgba(0,0,0,0.59);
+box-shadow: 0px 1px 9px 1px rgba(0,0,0,0.59);
+`;
 
 export const NavWrapper = styled.div`
   display: flex;
@@ -40,7 +40,7 @@ export const Hamburger = styled.div`
   padding: 4px;
   text-align: center;
   color: black;
-  border: 3px solid ${props=>props.theme.text};
+  border: 3px solid ${props => props.theme.text};
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -48,7 +48,7 @@ export const Hamburger = styled.div`
 
   & > * {
     width: 100%;
-    background-color: ${props=>props.theme.text};
+    background-color: ${props => props.theme.text};
     border-radius: 3px;
     height: 5px;
   } 

@@ -1,8 +1,12 @@
-import { Email, Instagram, Phone } from "@mui/icons-material";
+import { Email, LinkedIn, Phone } from "@mui/icons-material";
+import { Link } from "@mui/material";
 import React from "react";
 import { useState } from "react";
 import styled from "styled-components";
-
+const linkSytle = {
+  color: "inherit",
+  "text-decoration": "none",
+};
 const Contact = () => {
   const [message, setMessage] = useState("");
   const [info, setInfo] = useState({
@@ -90,10 +94,16 @@ const Contact = () => {
               <Email />
               satyam482002@gmail.com
             </ContactDiv>
-            <ContactDiv>
-              <Instagram />
-              satyammishra5509
-            </ContactDiv>
+            <Link
+              style={linkSytle}
+              href="https://www.linkedin.com/in/satyam-mishra-61258424b"
+              target="_blank"
+            >
+              <ContactDiv>
+                <LinkedIn />
+                @Satyam Mishra
+              </ContactDiv>
+            </Link>
           </ContactWrapper>
         </MyContact>
       </RightContainer>
@@ -134,9 +144,9 @@ export const RightContainer = styled.div`
 
 export const MyContact = styled.div`
   border-radius: 10px;
-  box-shadow: 1px -1px 8px 5px rgba(0, 0, 0, 0.27);
-  -webkit-box-shadow: 1px -1px 8px 5px rgba(0, 0, 0, 0.27);
-  -moz-box-shadow: 1px -1px 8px 5px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 0px 1px 9px 1px rgba(0, 0, 0, 0.59);
+  -moz-box-shadow: 0px 1px 9px 1px rgba(0, 0, 0, 0.59);
+  box-shadow: 0px 1px 9px 1px rgba(0, 0, 0, 0.59);
   padding: 20px;
   display: flex;
   flex-direction: column;

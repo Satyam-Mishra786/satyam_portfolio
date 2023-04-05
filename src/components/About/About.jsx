@@ -8,13 +8,12 @@ import { pink, green } from "@mui/material/colors";
 const About = ({ darkMode }) => {
   const ProgrammingSkills = [
     "HTML",
-    "CSS",
-    "JAVASCRIPT",
-    " BOOTSTRAP",
-    "REACT JS",
-    "STYLED COMPONENTS",
-    "MATERIAL UI",
-    "ADOBE PHOTOSHOP",
+    "CSS/Bootstrap",
+    "JavaScript",
+    "React Js",
+    "Styled Components",
+    "Data Structures And Algo",
+    "Java and C++",
   ];
   return (
     <AboutContainer id="about">
@@ -28,6 +27,11 @@ const About = ({ darkMode }) => {
             from <Highlight> India. </Highlight> I am dedicated to deliver the
             best <Highlight> UI Designs </Highlight> for best user experience. I
             can create fully responsive websites.
+            <br></br>
+            <Highlight>Problem Solver </Highlight>
+            || Learning
+            <Highlight> Data Structures and Algorithms </Highlight>
+            In Java
           </ContentContainerLeft>
         </LeftContainer>
         <RightContainer>
@@ -101,9 +105,9 @@ export const LeftContainer = styled.div`
   border-left: 3px solid ${(props) => props.theme.textSoft};
   font-size: 22px;
   border-radius: 20px;
-  box-shadow: 1px -1px 8px 5px rgba(0, 0, 0, 0.27);
-  -webkit-box-shadow: 1px -1px 8px 5px rgba(0, 0, 0, 0.27);
-  -moz-box-shadow: 1px -1px 8px 5px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 0px 1px 9px 1px rgba(0, 0, 0, 0.59);
+  -moz-box-shadow: 0px 1px 9px 1px rgba(0, 0, 0, 0.59);
+  box-shadow: 0px 1px 9px 1px rgba(0, 0, 0, 0.59);
 `;
 export const RightContainer = styled.div`
   padding-top: 20px;

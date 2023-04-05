@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { init } from "ityped";
-import BgImage from "../../assets/img/Code.jpg";
+import developer from "../../assets/img/developer.png";
 import {
   IntroContianer,
   Left,
@@ -23,6 +23,7 @@ const Intro = ({ mobile }) => {
   }, []);
   return (
     <IntroContianer id="home">
+      <Right Image={developer} />
       <Left>
         <Wrapper>
           <Small>I'm</Small>
@@ -30,7 +31,6 @@ const Intro = ({ mobile }) => {
           <Medium id="myElement"></Medium>
         </Wrapper>
       </Left>
-      <Right Image={BgImage} />
     </IntroContianer>
   );
 };

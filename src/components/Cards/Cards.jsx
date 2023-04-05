@@ -1,18 +1,19 @@
 import React from "react";
 import styled from "styled-components";
-import CodeImage from "../../assets/img/Code.jpg";
 import { data } from "../../assets/Index";
+import { Link } from "@mui/material";
 
 const Cards = () => {
   return (
     <>
       {data.map((item, index) => (
         <ProjectCards key={index}>
-          <CardDetails>{item.Name}</CardDetails>
+          {/* <CardDetails>{item.Name}</CardDetails> */}
           <CardImageContainer>
-            <LinkWebsite href={item.Link} target="_blank">
+            <Link href={item.Link} target="_blank">
               <CardImage src={item.Image} />
-            </LinkWebsite>
+            </Link>
+            <CardTitle className="hidenTitle">{item.Name}</CardTitle>
           </CardImageContainer>
         </ProjectCards>
       ))}
@@ -21,6 +22,18 @@ const Cards = () => {
 };
 
 export default Cards;
+
+const CardTitle = styled.div`
+  opacity: 0;
+  color: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in;
+  font-size: 20px;
+  cursor: pointer;
+`;
 
 const ProjectCards = styled.div`
   width: 354px;
@@ -36,28 +49,26 @@ const ProjectCards = styled.div`
     height: 150px;
   }
 
-  background-image: ${(props) => (CodeImage ? `url(${props.CodeImage})` : "")};
-  /* background-color: ${(props) => props.theme.bg}; */
-
   transition: transform 0.5s ease;
   &:hover {
     transform: scale(1.05);
   }
-`;
-const CardImageContainer = styled.div`
-  width: 100%;
-  height: 100%;
 `;
 const CardImage = styled.img`
   width: 100%;
   border-radius: 10px;
   height: 100%;
 `;
+const CardImageContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  &:hover {
+    ${CardTitle} {
+      opacity: 1;
+    }
+  }
 
-const CardDetails = styled.div`
-  padding: 3px 5px;
-  font-size: 20px;
-  background: transparent;
+  &:hover ${CardImage} {
+    opacity: 0.2;
+  }
 `;
-
-const LinkWebsite = styled.a``;

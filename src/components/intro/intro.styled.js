@@ -32,7 +32,8 @@ export const Right = styled.div`
   -webkit-clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%);
   background-image: ${(props) => `url(${props.Image})`};
-  
+  background-repeat:no-repeat;
+  background-position:center;
   @media (max-width: 873px) {
     display: none;
   }
