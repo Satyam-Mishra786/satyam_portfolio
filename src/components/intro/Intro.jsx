@@ -6,6 +6,7 @@ import {
   Left,
   Wrapper,
   Right,
+  RightWrapper,
   Small,
   Medium,
   Large,
@@ -23,7 +24,9 @@ const Intro = ({ mobile }) => {
   }, []);
   return (
     <IntroContianer id="home">
-      <Right Image={developer} />
+      <RightWrapper>
+        <Right src={developer} />
+      </RightWrapper>
       <Left>
         <Wrapper>
           <Small>I'm</Small>

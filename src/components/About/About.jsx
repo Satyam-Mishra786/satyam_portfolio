@@ -62,24 +62,17 @@ export const AboutContainer = styled.div`
   width: 100%;
   background-color: ${(props) => props.theme.bg};
   color: ${(props) => props.theme.text};
-  padding: 20px 50px;
-  @media (max-width: 1046px) {
-    padding: 10px 30px;
-  }
+  padding: 1.5rem 3rem;
 `;
 
 export const HeadContainer = styled.div`
   width: 100%;
-  height: 70px;
+  height: clamp(50px, 70px, 100px);
   background: transparent;
   text-align: center;
-  font-size: 35px;
+  font-size: 2.2rem;
   color: ${(props) => props.theme.textSoft};
   margin-bottom: 10px;
-  @media (max-width: 1046px) {
-    font-size: 35px;
-    height: 50px;
-  }
 `;
 export const Wrapper = styled.div`
   display: flex;
@@ -103,8 +96,7 @@ export const LeftContainer = styled.div`
   padding-top: 20px;
   border-right: 3px solid ${(props) => props.theme.textSoft};
   border-left: 3px solid ${(props) => props.theme.textSoft};
-  font-size: 22px;
-  border-radius: 20px;
+  border-radius: 1rem;
   -webkit-box-shadow: 0px 1px 9px 1px rgba(0, 0, 0, 0.59);
   -moz-box-shadow: 0px 1px 9px 1px rgba(0, 0, 0, 0.59);
   box-shadow: 0px 1px 9px 1px rgba(0, 0, 0, 0.59);
@@ -114,53 +106,37 @@ export const RightContainer = styled.div`
   @media (max-width: 600px) {
     width: 100%;
     height: 100%;
-    clear: both;
   }
 `;
 
 export const ContainerHeads = styled.div`
-  font-size: 26px;
+  font-size: 1.9rem;
   text-align: center;
   text-decoration: underline;
-
-  @media (max-width: 800px) {
-    font-size: 21px;
-  }
 `;
 export const ContentContainerLeft = styled.div`
-  padding: 20px 50px;
-  line-height: 2;
-  word-spacing: 10px;
-  @media (max-width: 1046px) {
-    word-spacing: 3px;
-    line-height: 1.2;
-    padding: 15px 35px;
-  }
+  padding: 1.5rem 2.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  word-spacing: 5px;
 `;
 export const ContentContainerRight = styled.div`
-  padding: 20px 50px;
-  @media (max-width: 1046px) {
-    padding: 10px 30px;
-  }
+  padding: 1.5rem 4rem;
+  font-size: 1.5rem;
 `;
 
 export const SkillList = styled.ul`
   list-style: none;
   flex-direction: column;
   display: flex;
-  gap: 20px;
+  gap: 1.5rem;
 `;
 
 export const SKills = styled.li`
   display: flex;
   align-items: center;
-  font-size: 25px;
+  font-size: 1.5rem;
   gap: 15px;
-
-  @media (max-width: 1046px) {
-    font-size: 18px;
-    gap: 10px;
-  }
 `;
 
 export const Highlight = styled.span`

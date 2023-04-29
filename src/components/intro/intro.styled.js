@@ -3,80 +3,98 @@ import styled from "styled-components";
 export const IntroContianer = styled.div`
   display: flex;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: ${(props) => props.theme.bg};
+  overflow: hidden;
+  @media (max-width: 750px) {
+    flex-direction: column;
+  }
 `;
 
 export const Left = styled.div`
-  flex: 1;
+  flex: 1.5;
   background-color: ${(props) => props.theme.bg};
-  padding-left: 50px;
+  padding-left: 3rem;
   display: flex;
-  gap: 30px;
-  justify-content: space-evenly;
-  flex-direction: column;
-  position: relative;
+  align-items: center;
+  justify-content: center;
   
 `;
 
 export const Wrapper = styled.div`
-  height: min-content;
-  margin: auto 0;
+ 
   display: flex;
-  gap: 20px;
+  justify-content: center;
   flex-direction: column;
+  gap: 30px;
+  @media (max-width: 900px) {
+    gap: 20px;
+  }
+  @media (max-width:425px) {
+    gap: 10px;
+  }
 
 `
-export const Right = styled.div`
-  flex: 1.2;
-  -webkit-clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%);
-  clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%);
-  background-image: ${(props) => `url(${props.Image})`};
-  background-repeat:no-repeat;
-  background-position:center;
-  @media (max-width: 873px) {
-    display: none;
-  }
-`;
 
 export const Small = styled.div`
-  font-size: 35px;
-  height: 50px;
+  font-size: 2rem;
+  height: clamp(30px, 50px , 70px);
   font-weight: 400;
   color: ${(props) => props.theme.textSoft};
 
-  @media (max-width: 600px) {
-    font-size: 25px;
+  @media (max-width: 900px) {
+    font-size: 1.5rem;
   }
   @media (max-width:425px) {
-    font-size: 27px;
+    font-size: 1.2rem;
   }
 `;
 
 export const Medium = styled.div`
   color: red;
-  font-size: 42px;
-  margin-left: 70px;
-  height: 70px;
-  @media (max-width: 600px) {
-    margin-left: 50px;
+  font-size: 2.7rem;
+  height: clamp(30px, 70px , 70px);
+  transform: translateX(25%);
+  @media (max-width: 900px) {
+    font-size: 2rem;
   }
   @media (max-width:425px) {
-    font-size: 34px;
+    font-size: 1.5rem;
   }
   
 `;
 
 export const Large = styled.div`
   color: ${(props) => props.theme.text};
-  font-size: 50px;
+  font-size: 3rem;
   font-weight: 500;
-  height: 70px;
-  margin-left: 30px;
-  @media (max-width: 600px) {
-    margin-left: 20px;
+  height: clamp(30px, 70px , 70px);
+  transform: translateX(10%);
+  @media (max-width: 900px) {
+    font-size: 2.3rem;
   }
-  @media (max-width: 425px) {
-    font-size: 40px;
+  @media (max-width:425px) {
+    font-size: 1.8rem;
   }
+`;
+
+
+
+export const RightWrapper = styled.div`
+flex: 1.2;
+-webkit-clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%);
+  background-image: ${(props) => `url(${props.Image})`};
+  background-repeat:no-repeat;
+  background-position:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:2rem;
+
+`
+export const Right = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
 `;

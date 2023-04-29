@@ -3,6 +3,7 @@ export {
   Left,
   Wrapper,
   Right,
+  RightWrapper,
   Small,
   Medium,
   Large,
