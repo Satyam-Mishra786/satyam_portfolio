@@ -62,7 +62,7 @@ export const AboutContainer = styled.div`
   width: 100%;
   background-color: ${(props) => props.theme.bg};
   color: ${(props) => props.theme.text};
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 2rem;
 `;
 
 export const HeadContainer = styled.div`
@@ -77,6 +77,7 @@ export const HeadContainer = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   width: 100%;
+  gap: 40px;
   /* height: calc(100vh - 140px); */
 
   & > * {
@@ -115,13 +116,13 @@ export const ContainerHeads = styled.div`
   text-decoration: underline;
 `;
 export const ContentContainerLeft = styled.div`
-  padding: 1.5rem 2.5rem;
+  padding: 1rem;
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 1.8rem;
   word-spacing: 5px;
 `;
 export const ContentContainerRight = styled.div`
-  padding: 1.5rem 4rem;
+  padding: 1rem;
   font-size: 1.5rem;
 `;
 
